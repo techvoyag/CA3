@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag docker_demo:latest
+      run: docker build . --file Dockerfile --tag techvoyag/ca3:latest
     - name: Push Docker image
       run: |
           docker tag techvoyag/ca3:latest ${{ secrets.DOCKER_USERNAME }}/techvoyag/ca3:latest
